@@ -1,0 +1,40 @@
+/*styling used for the alert message popups within the login page */
+
+.top {
+margin-bottom: 15px;
+}
+.buttondiv {
+margin-top: 10px;
+}
+.messagebox{
+	position:absolute;
+	width:100px;
+	margin-bottom:0px;
+	border:1px solid #c93;
+	background:#ffc;
+	padding:3px;
+}
+.messageboxok{
+	position:absolute;
+	width:auto;
+	margin-bottomt:0px;
+	border:1px solid #349534;
+	background:#C9FFCA;
+	padding:3px;
+	font-weight:bold;
+	color:#008000;
+	
+}
+.messageboxerror{
+	position:absolute;
+	width:auto;
+	margin-bottom:30px;
+	border:1px solid #CC0000;
+	background:#F7CBCA;
+	padding:3px;
+	font-weight:bold;
+	color:#CC0000;
+}
+
+</style>
+

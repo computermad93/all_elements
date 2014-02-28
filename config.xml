@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.example"
+    version   = "1.0.0">
+
+<name>small t test all elements </name>
+
+<description>
+testing all elements
+</description>
+
+
+<access origin="http://192.168.1.83*" />
+<access origin="http://192.168.1.83/smallt*" />
+
+<access origin="http://192.168.1.83" />
+<access origin="http://192.168.1.83/smallt" />
+
+
+<access origin="http://192.168.1.83*" />
+<access origin="http://192.168.1.83/smallt*" />
+
+<author href="https://www.facebook.com/christopher.murrell.397" email="c.murrell93@live.co.uk">
+Chris Murrell
+</author>
+
+<preference name="SMALL-t" value="1.0.0" />
+
+<!-- Icons -->
+
+<icon src="icon.png" />
+
+<icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+<icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+<icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+
+
+
+
+<!-- Splash Screens -->
+<gap:splash src="small-t-splashscreen.png" />
+<gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+<gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+<gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+
+
+</widget>

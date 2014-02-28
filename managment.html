@@ -1,0 +1,188 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>small-t managment system</title>
+<link href="jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+<script src="addSwimmerScript.js" type="text/javascript"></script>
+
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1> Managment Console</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#Time&Record">Time & Record</a></li>
+            <li><a href="#Disqualification">Disqualification </a></li>
+			<li><a href="#SwimmerManagment">Swimmer Managment</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>SMALL-t</h4>
+	</div>
+</div>
+
+<div id="Time&Record" data-role="page"> <!--start of time and record page-->
+	<div data-role="header">
+            <div id="backButton"> 
+          <div align="justify"><!--BackButton-->
+            <a href="#page" class="ui-btn-corner-left" data-icon="arrow-l"       data-iconpos="left" data-role="button">Back</a></div>
+        </div> <!--BackButton End-->
+    
+		<h1 align="right">Time & Record</h1>
+        
+
+        
+	</div>
+    <script src="StopWatchTest.js" type="text/javascript"></script>
+    
+   <body onload='load();'>
+
+
+<div id='main'>
+	<button type='button' onclick='ss()' onfocus='this.blur()'>Start / Stop</button>
+	<input type='text' id='disp' />
+	<button type='button' onclick='r()' onfocus='this.blur()'>Reset</button>
+</div>
+<table border='1'>
+	<tr><th>Lap #</th><th>This Lap</th><th>Running Total</th></tr>
+	<tbody id='lap'></tbody>
+</table>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-99796-2']);
+_gaq.push(['_trackPageview']);
+
+
+</script>
+	<div data-role="content">	
+
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div> <!--end of time and record page-->
+
+
+
+
+<!--Disqualification page start
+-->
+
+<div data-role="page" id="Disqualification">
+	<div data-role="header">
+    
+      <div id="backButton"> <!--BackButton-->
+          <div align="justify">
+            <a href="#page" class="ui-btn-corner-left" data-icon="arrow-l"       data-iconpos="left" data-role="button">Back</a></div>
+        </div> <!--BackButton End-->
+        
+		<h1>Disqualification</h1>
+	</div>
+   
+          
+    <!--start of DQ report-->
+    <div data-role="collapsible-set">
+      <div data-role="collapsible">
+        <h3>DQ Report</h3>
+        
+      </div>
+      <!--end of QD report-->
+      
+          <!--start of DQ viwer-->
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>DQ Viewer</h3>
+        <p>Content</p>
+      </div>
+         <!--end of DQ viwer-->
+         
+            <!--start of DQ manager-->
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>DQ Manager</h3>
+        <p>Content</p>
+      </div>
+      
+         <!--end of DQ manager-->
+    </div>
+
+      
+ 
+          
+        
+         
+          
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+<!--Disqualification page end-->
+
+
+
+
+<!--swimmer managment start-->
+
+<div data-role="page" id="SwimmerManagment">
+	<div data-role="header">
+       <div id="backButton"> <!--BackButton-->
+          <div align="justify">
+            <a href="#page" class="ui-btn-corner-left" data-icon="arrow-l"       data-iconpos="left" data-role="button">Back</a></div>
+        </div> <!--BackButton End-->
+		<h1>Swimmer Managment</h1>
+	</div>
+	<div data-role="content">
+	  <div data-role="collapsible-set">
+	    <div data-role="collapsible">
+        
+        <!--adding swimmer form, this allows swimmers details to be added to the datbase -->
+	      <h3>Add Swimmer</h3>
+	   
+       <form id="myForm" action="http://192.168.1.83/smallt/addingSwimmers.php" method="post">
+Name: <input type="text" name="swimmerName" /><br />
+Age : <input type="text" name="swimmerAge" /><br />
+<button id="sub">Save</button>
+<input type="reset" value="Reset" />
+</form>
+ 
+<span id="result"></s>
+
+
+</div>
+
+<!--adding swimmer form ending -->
+	   
+	    <div data-role="collapsible" data-collapsed="true">
+	      <h3>View Swimmers List</h3>
+          <script src="listOfSwimmersScript.js" type="text/javascript"></script>
+          
+          <ul data-role="gridview" id="listofswimmers">
+          </ul>
+          
+	      <p>Content</p>
+        </div>
+      </div>	
+    
+    
+    
+    
+    
+		
+	</div>
+	<div data-role="footer">
+		<h4>SMALL-t</h4>
+	</div>
+</div>
+<!--swimmer magagment end-->
+
+</body>
+</html>
